@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Richmond Airdrop</title>
@@ -35,11 +35,24 @@
       border-radius: 10px;
       font-weight: 600;
     }
-    .button.secondary {
-      background: #4f86f7;
+    .button.secondary { background: #4f86f7; }
+    .button.tertiary { background: #6b98f8; }
+    .copy-button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 14px;
+      background: #2d3748;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      border: none;
     }
-    .button.tertiary {
-      background: #6b98f8;
+    .copy-status {
+      margin-left: 10px;
+      font-size: 0.9rem;
+      color: #2f855a;
+      display: none;
     }
     .language-block {
       margin-top: 16px;
@@ -54,6 +67,9 @@
       border-radius: 12px;
       margin: 24px 0;
     }
+    a {
+      color: #3a76f0;
+    }
     strong {
       font-weight: 600;
     }
@@ -61,105 +77,128 @@
 </head>
 <body>
 
-  <h1>Welcome to the Richmond Airdrop</h1>
+<h1>Welcome to the Richmond Airdrop</h1>
 
-  <img
-    class="image"
-    src="https://media.defense.gov/2017/Mar/27/2001722653/1200/1200/0/170324-F-ZZ999-102.JPG"
-    alt="Community support image">
+<img
+  class="image"
+  src="https://media.defense.gov/2017/Mar/27/2001722653/1200/1200/0/170324-F-ZZ999-102.JPG"
+  alt="Community support image">
 
-  <div class="box">
+<div class="box">
+  <p>
+    The Richmond Airdrop is a community-run effort created to provide support
+    during a time of widespread uncertainty.
+  </p>
+
+  <p>
+    This site is a starting point for connecting people who need help with
+    everyday tasks to a trusted group of volunteers.
+  </p>
+</div>
+
+<h2>What Is the Signal Group?</h2>
+
+<div class="box">
+  <p>
+    The Richmond Airdrop Signal group is a private, moderated group where
+    people can request help and coordinate assistance.
+  </p>
+
+  <p>
+    We use Signal because it is a reliable, widely available messaging app
+    that prioritizes privacy and security.
+    It allows us to communicate clearly while minimizing unnecessary data sharing.
+  </p>
+
+  <p>
+    If you do not already have Signal installed, you can download it here:
+    <br>
+    <a href="https://signal.org/download/" target="_blank" rel="noopener">
+      https://signal.org/download/
+    </a>
+  </p>
+</div>
+
+<h2>Request Access</h2>
+
+<a class="button" href="https://signal.me/#p/+15550000001">
+  Message Admin 1 on Signal
+</a>
+
+<a class="button secondary" href="https://signal.me/#p/+15550000002">
+  Message Admin 2 on Signal
+</a>
+
+<a class="button tertiary" href="https://signal.me/#p/+15550000003">
+  Message Admin 3 on Signal
+</a>
+
+<div class="box">
+  <p>
+    To help ensure your request is seen promptly,
+    <strong>please message all three admins</strong>.
+    This reduces delays if one admin is unavailable.
+  </p>
+
+  <p><strong>Message to send:</strong></p>
+  <p id="request-message">
+    Please add me to this Richmond Airdrop Signal group
+  </p>
+
+  <button class="copy-button" onclick="copyMessage()">
+    Copy message
+  </button>
+  <span id="copy-status" class="copy-status">Copied ✓</span>
+</div>
+
+<div class="box">
+  <h2>Instructions (Other Languages)</h2>
+
+  <div class="language-block">
+    <strong>Español</strong>
     <p>
-      The Richmond Airdrop is a community-run effort created to provide support
-      during a time of widespread uncertainty.
-    </p>
-
-    <p>
-      If you are looking for assistance or support with everyday tasks,
-      you can request access to the Richmond Airdrop Signal group using the buttons below.
-    </p>
-
-    <p>
-      To help ensure your request is seen promptly,
-      <strong>please message all three admins below</strong>.
-      This reduces delays if one admin is unavailable.
+      Para solicitar acceso, envíe un mensaje a los tres administradores usando
+      los botones de arriba. Esto ayuda a asegurar que su solicitud sea vista
+      dentro de 24 horas.
     </p>
   </div>
 
-  <h2>Request Access</h2>
-
-  <a class="button" href="https://signal.me/#p/+15550000001">
-    Message Admin 1 on Signal
-  </a>
-
-  <a class="button secondary" href="https://signal.me/#p/+15550000002">
-    Message Admin 2 on Signal
-  </a>
-
-  <a class="button tertiary" href="https://signal.me/#p/+15550000003">
-    Message Admin 3 on Signal
-  </a>
-
-  <div class="box">
+  <div class="language-block">
+    <strong>Português (Brasil)</strong>
     <p>
-      Please send the same message to each admin.
-      This helps ensure you can be added within <strong>24 hours</strong>.
-    </p>
-
-    <p><strong>Message to send:</strong></p>
-    <p>
-      Please add me to this Richmond Airdrop Signal group
+      Para solicitar acesso, envie uma mensagem para todos os três administradores
+      usando os botões acima. Isso ajuda a garantir que seu pedido seja visto em até 24 horas.
     </p>
   </div>
 
-  <!-- TRANSLATIONS -->
-  <div class="box">
-    <h2>Instructions (Other Languages)</h2>
-
-    <div class="language-block">
-      <strong>Español</strong>
-      <p>
-        Para solicitar acceso, envíe un mensaje a los tres administradores usando
-        los botones de arriba. Enviar el mismo mensaje a cada uno ayuda a asegurar
-        que su solicitud sea vista dentro de las próximas 24 horas.
-      </p>
-      <p><strong>Mensaje a enviar:</strong><br>
-      Por favor, agréguenme a este grupo de Signal Richmond Airdrop</p>
-    </div>
-
-    <div class="language-block">
-      <strong>Português (Brasil)</strong>
-      <p>
-        Para solicitar acesso, envie uma mensagem para todos os três administradores
-        usando os botões acima. Enviar a mesma mensagem para cada um ajuda a garantir
-        que seu pedido seja visto em até 24 horas.
-      </p>
-      <p><strong>Mensagem:</strong><br>
-      Por favor, me adicionem a este grupo do Signal Richmond Airdrop</p>
-    </div>
-
-    <div class="language-block">
-      <strong>Français</strong>
-      <p>
-        Pour demander l’accès, envoyez un message aux trois administrateurs à l’aide
-        des boutons ci-dessus. Envoyer le même message à chacun permet d’assurer
-        que votre demande sera vue dans les 24 heures.
-      </p>
-      <p><strong>Message à envoyer :</strong><br>
-      Veuillez m’ajouter à ce groupe Signal Richmond Airdrop</p>
-    </div>
-
-    <div class="language-block">
-      <strong>Deutsch</strong>
-      <p>
-        Um Zugriff anzufordern, senden Sie eine Nachricht an alle drei Administratoren
-        über die obenstehenden Schaltflächen. Wenn Sie dieselbe Nachricht an alle senden,
-        stellen Sie sicher, dass Ihre Anfrage innerhalb von 24 Stunden gesehen wird.
-      </p>
-      <p><strong>Nachricht:</strong><br>
-      Bitte fügen Sie mich dieser Richmond Airdrop Signal-Gruppe hinzu</p>
-    </div>
+  <div class="language-block">
+    <strong>Français</strong>
+    <p>
+      Pour demander l’accès, envoyez un message aux trois administrateurs à l’aide
+      des boutons ci-dessus. Cela permet de garantir que votre demande soit vue sous 24 heures.
+    </p>
   </div>
+
+  <div class="language-block">
+    <strong>Deutsch</strong>
+    <p>
+      Um Zugriff anzufordern, senden Sie bitte eine Nachricht an alle drei Administratoren
+      über die obenstehenden Schaltflächen. So wird sichergestellt, dass Ihre Anfrage
+      innerhalb von 24 Stunden gesehen wird.
+    </p>
+  </div>
+</div>
+
+<script>
+  function copyMessage() {
+    const text = document.getElementById("request-message").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const status = document.getElementById("copy-status");
+      status.style.display = "inline";
+      setTimeout(() => status.style.display = "none", 2000);
+    });
+  }
+</script>
 
 </body>
 </html>
